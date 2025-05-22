@@ -198,6 +198,33 @@ namespace DesignPatterns
 
           return  kv.FirstOrDefault(e => e.Value > (nums.Length) / 2).Key;
         }
+
+        internal void RotateByK(int[] nums, int k)
+        {
+            //reverse the array 
+            k= k % nums.Length;
+             ReverseKElements(nums, 0, nums.Length-1);
+
+            //reverse the first k elements 
+            ReverseKElements(nums, 0, k - 1);
+
+            ReverseKElements(nums,k, nums.Length - 1);
+
+            
+        }
+
+        internal void ReverseKElements(int[] num , int start, int end ) 
+        {
+            //int temp = 0; 
+            while (start < end)
+            {
+                (num[start], num[end]) = (num[end], num[start]);   
+
+                start++; end--;
+            }
+
+        }
+
         #endregion
 
 

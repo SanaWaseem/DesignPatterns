@@ -39,10 +39,16 @@ using DesignPatterns.AdapterPattern;
 //code.RemoveDuplicateV2(nums2);
 #endregion
 
-#region Majority Element
+#region 169 Majority Element
 //int[] nums = { 2, 3, 2 };
 //code.MajorityElement(nums);
 
+#endregion
+
+#region Rotate Array 
+int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
+int k = 3; 
+code.RotateByK(nums, k);
 #endregion
 
 #endregion
